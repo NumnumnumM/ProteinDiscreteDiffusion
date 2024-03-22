@@ -1,0 +1,37 @@
+{
+    "device" : "cuda:5",
+    "seed" : 1024,
+    "epoch" : 1000,
+    "cache" : "11-28-10",
+    "resume" : false,
+    "batch_size" : 320,
+    "num_workers" : 8,
+    "num_sample" : 100,
+
+    "model" : {
+        "emb_dim" : 128,
+        "hidden_dim" : 256,
+        "num_heads" : 8,
+        "num_layers" : 12,
+        "seq_len" : 512,
+        "num_steps" : 1000,
+        "num_classes" : 20,
+        "schedule" : "cosine",
+        "transition_type" : "blosum",
+        "loss_type" : "hybrid"
+    },
+
+    "dataset" : {
+        "csv_path" : "/data/diffsequence/csv_file/dev_512_1041635.csv",
+        "min_len" : 32,
+        "max_len" : 512
+    },
+
+    "scheduler" : {
+        "lr" : 0.0001,
+        "mode" : "min",
+        "factor" : 0.9,
+        "cooldown" : 20,
+        "min_lr" : 1e-7
+    }
+}

@@ -1,0 +1,9 @@
+accelerate==0.24.1
+biopython==1.81
+matplotlib==3.8.1
+numpy==1.23.5
+omegaconf==2.3.0
+pandas==2.1.4
+torch==2.0.0
+tqdm==4.64.1
+tensorboard==2.15.1
